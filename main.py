@@ -576,4 +576,4 @@ async def sugestao(ctx):
     await ctx.send(embed=embed)
 
 
-client.run('ODk0MDE0Nzk2Nzc1NjkwMjcw.YVj2KQ.FEAD-4KbJnqedkB7z57aREhipEc')
+client.run('ODk0MDE0Nzk2Nzc1NjkwMjcw.YVj2KQ.pAi2T-enFcthkZ-NIMSTglHZ2hI')
