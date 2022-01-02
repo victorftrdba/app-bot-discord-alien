@@ -1,0 +1,579 @@
+import discord
+import json
+import requests
+import os
+from typing import Text
+from discord.ext import commands
+
+client = commands.Bot(command_prefix="a!", case_insensitive=False)
+
+
+@client.event
+async def on_ready():
+    activity = discord.Game(name='Happy New Year ✨', type=3)
+    await client.change_presence(status=discord.Status.idle, activity=activity)
+    print("Conectando, por favor, aguarde...")
+
+
+@client.event
+async def on_message(message):
+    if isinstance(message.channel, discord.DMChannel):
+        return
+    await client.process_commands(message)
+
+
+@client.command()
+async def clear(ctx, amount: int):
+    await ctx.channel.purge(limit=amount)
+
+
+@clear.error
+async def clear_error(ctx, error):
+    if isinstance(error, commands.MissingRequiredArguments):
+        await ctx.send('...')
+
+
+@client.command()
+async def consulta(ctx):
+    embed = discord.Embed(
+        title='',
+        description='',
+        colour=16766976
+    )
+
+    embed.add_field(name="🕵🏻‍♂️ 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗡𝗢𝗠𝗘",
+                    value="Use o comando ***a!nome*** {Nome Completo} para realizar a consulta.", inline=False)
+
+    embed.add_field(name="👽 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗣𝗙",
+                    value="Use o comando ***a!cpf*** {CPF da Pessoa} para a consultar os dados.", inline=False)
+
+    embed.add_field(name="📵 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗧𝗘𝗟𝗘𝗙𝗢𝗡𝗘",
+                    value="Use o comando ***a!telefone*** {Telefone} para realizar a consulta.", inline=False)
+
+    embed.add_field(name="🏨 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗡𝗣𝗝",
+                    value="Use o comando ***a!cnpj*** {CNPJ} para consultar os dados.", inline=False)
+
+    embed.add_field(name="🚘 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗣𝗟𝗔𝗖𝗔",
+                    value="Use o comando ***a!placa*** {Placa do veículo} para realizar a consulta.", inline=False)
+
+    embed.add_field(name="📌 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗜𝗣",
+                    value="Use o comando ***a!ip*** {IP} para realizar a consulta do IP.", inline=False)
+
+    embed.add_field(name="💳 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗕𝗜𝗡",
+                    value="Use o comando ***a!bin*** {Número da BIN} para realizar a consulta.", inline=False)
+
+    embed.add_field(name="📫 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗘𝗣",
+                    value="Use o comando ***a!cep*** {CEP da Rua} para realizar a consulta.", inline=False)
+
+    embed.add_field(name="🦠 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗢𝗩𝗜𝗗",
+                    value="Use o comando ***a!covid*** {Sigla do Estado} para realizar a consulta.", inline=False)
+
+    embed.add_field(name="🏦 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗕𝗔𝗡𝗖𝗢",
+                    value="Use o comando ***a!banco*** {Código do Banco} para realizar a consulta.", inline=False)
+
+    embed.add_field(name="💾 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗦𝗜𝗧𝗘",
+                    value="Use o comando ***a!site*** {URL do site} para realizar a consulta.", inline=False)
+
+    embed.add_field(name="💰 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗠𝗢𝗘𝗗𝗔",
+                    value="Use o comando ***a!moeda*** ex:{USD/BRL} para realizar a consulta.", inline=False)
+
+    embed.set_image(url='https://i.gifer.com/Cewn.gif')
+
+    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/3GksSgz.png')
+
+    embed.set_footer(text='ALIEN.py © All Rights Reserved', icon_url='https://i.imgur.com/Pn0zQ5S.jpg')
+
+    await ctx.send(embed=embed)
+
+
+####CONSULTA DE NOME
+
+@client.command()
+async def nome(ctx):
+    embed = discord.Embed(
+        title='',
+        description='A Consulta por ***NOME*** estará disponível em breve. No momento,\nestamos com ***ausência*** das APIs de consultas por ***nome***!',
+        colour=3386077
+    )
+
+    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE NOME', icon_url='')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+####CONSULTA DE CPF
+
+@client.command()
+async def cpf(ctx):
+    embed = discord.Embed(
+        title='',
+        description='A Consulta por ***CPF*** estará disponível em breve. No momento,\nestamos com ***ausência*** das APIs de consultas por ***CPF!***',
+        colour=13874766
+    )
+
+    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CPF', icon_url='')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+##TELEFONE
+
+@client.command()
+async def telefone(ctx):
+    embed = discord.Embed(
+        title='',
+        description='A Consulta por ***TELEFONE*** estará disponível em breve. No momento,\nestamos com ***ausência*** das APIs de consultas por ***telefone!***',
+        colour=6084221
+    )
+
+    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE TELEFONE', icon_url='')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+##PLACA
+
+@client.command()
+async def placa(ctx):
+    embed = discord.Embed(
+        title='',
+        description='A Consulta por ***PLACA*** estará disponível em breve. No momento,\nestamos com ***ausência*** das APIs de consultas por ***placa!***',
+        colour=3556561
+    )
+
+    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE PLACA', icon_url='')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+##CONSULTA DE CNPJ
+
+@client.command()
+async def cnpj(ctx, cnpj):
+    data = requests.get(f"https://api-publica.speedio.com.br/buscarcnpj?cnpj={cnpj}").json()
+
+    try:
+        error = data["error"]
+        embed = discord.Embed(
+            title='⚠️ CNPJ NÃO ENCONTRADO ⚠️',
+            colour=16766976
+        )
+
+        embed.set_author(name='', icon_url='')
+
+        await ctx.send(embed=embed)
+
+        return
+    except Exception:
+        pass
+
+        embed = discord.Embed(
+            title='',
+            colour=16749824
+        )
+
+    embed.add_field(name="➢ CNPJ", value=data['CNPJ'], inline=False)
+    embed.add_field(name="➢ Nome Fantasia", value=data['NOME FANTASIA'], inline=False)
+    embed.add_field(name="➢ Razão Social", value=data['RAZAO SOCIAL'], inline=False)
+    embed.add_field(name="➢ Status", value=data['STATUS'], inline=False)
+    embed.add_field(name="➢ UF", value=data['UF'], inline=False)
+    embed.add_field(name="➢ Bairro", value=data['BAIRRO'], inline=False)
+    embed.add_field(name="➢ Número", value=data['NUMERO'], inline=False)
+    embed.add_field(name="➢ Município", value=data['MUNICIPIO'], inline=False)
+    embed.add_field(name="➢ Abertura", value=data['DATA ABERTURA'], inline=False)
+    embed.add_field(name="➢ DDD", value=data['DDD'], inline=False)
+    embed.add_field(name="➢ Telefone", value=data['TELEFONE'], inline=False)
+    embed.add_field(name="➢ CNAE", value=data['CNAE PRINCIPAL DESCRICAO'], inline=False)
+    embed.add_field(name="➢ CNAE Código", value=data['CNAE PRINCIPAL CODIGO'], inline=False)
+    embed.add_field(name="➢ CNAE Código", value=data['COMPLEMENTO'], inline=False)
+    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://i.imgur.com/dQDb3d1.png')
+    embed.set_image(url='https://c.tenor.com/9gUN8--cygQAAAAC/peaky-blinders-smoking.gif')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+####CONSULTA DE IP
+
+@client.command()
+async def ip(ctx, ip):
+    data = requests.get(f"http://ipwhois.app/json/{ip}").json()
+
+    try:
+        error = data["message"]
+        embed = discord.Embed(
+            title='⚠️ IP NÃO ENCONTRADO ⚠️',
+            description='',
+            colour=16766976
+        )
+
+        embed.set_author(name='', icon_url='')
+
+        await ctx.send(embed=embed)
+
+        return
+    except Exception:
+        pass
+
+        embed = discord.Embed(
+            title='',
+            colour=7799031
+        )
+
+    embed.add_field(name="➢ IP", value=data['ip'], inline=False)
+    embed.add_field(name="➢ Cidade", value=data['city'], inline=False)
+    embed.add_field(name="➢ Estado", value=data['region'], inline=False)
+    embed.add_field(name="➢ País", value=data['country'], inline=False)
+    embed.add_field(name="➢ Latitude", value=data['latitude'], inline=False)
+    embed.add_field(name="➢ Longitude", value=data['longitude'], inline=False)
+    embed.add_field(name="➢ Provedor", value=data['isp'], inline=False)
+    embed.add_field(name="➢ Empresa Responsável", value=data['org'], inline=False)
+    embed.add_field(name="➢ Tipo de Conexão", value=data['type'], inline=False)
+
+    embed.set_author(name='ㅤﾠㅤ   CONSULTA DE IP', icon_url='https://i.imgur.com/4t6xiCR.gif')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    embed.set_thumbnail(url=data['country_flag'])
+
+    await ctx.send(embed=embed)
+
+
+####CONSULTA DE COVID19
+
+@client.command()
+async def covid(ctx, covid):
+    data = requests.get(f"https://covid19-brazil-api.vercel.app/api/report/v1/brazil/uf/{covid}").json()
+
+    try:
+        error = data["error"]
+        embed = discord.Embed(
+            title='⚠️ ESTADO NÃO ENCONTRADO ⚠️',
+            colour=16766976
+        )
+
+        embed.set_author(name='', icon_url='')
+
+        await ctx.send(embed=embed)
+
+        return
+    except Exception:
+        pass
+
+        embed = discord.Embed(
+            title='',
+            colour=13841202
+        )
+
+    embed.add_field(name="➢ Estado", value=data['state'], inline=False)
+    embed.add_field(name="➢ Casos", value=data['cases'], inline=False)
+    embed.add_field(name="➢ Mortes", value=data['deaths'], inline=False)
+    embed.add_field(name="➢ Suspeitos", value=data['suspects'], inline=False)
+    embed.add_field(name="➢ Descartados", value=data['refuses'], inline=False)
+    embed.add_field(name="➢ Atualização", value=data['datetime'], inline=False)
+    embed.set_author(name='ㅤCONSULTA DE COVID19ㅤㅤㅤ', icon_url='https://i.imgur.com/YLqyyKG.png')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+####CONSULTA DE CEP
+
+@client.command()
+async def cep(ctx, cep):
+    data = requests.get(f"https://cep.awesomeapi.com.br/json/{cep}").json()
+
+    try:
+        error = data["message"]
+        embed = discord.Embed(
+            title='⚠️ CEP NÃO ENCONTRADO ⚠️',
+            colour=16766976
+        )
+
+        await ctx.send(embed=embed)
+
+        return
+    except Exception:
+        pass
+
+        embed = discord.Embed(
+            title='',
+            colour=4236377
+        )
+
+    embed.add_field(name="➢ CEP", value=data['cep'], inline=False)
+    embed.add_field(name="➢ Rua", value=data['address'], inline=False)
+    embed.add_field(name="➢ Bairro", value=data['district'], inline=False)
+    embed.add_field(name="➢ Cidade", value=data['city'], inline=False)
+    embed.add_field(name="➢ Estado", value=data['state'], inline=False)
+    embed.add_field(name="➢ Logradouro", value=data['address_name'], inline=False)
+    embed.add_field(name="➢ Latitude", value=data['lat'], inline=False)
+    embed.add_field(name="➢ Longitude", value=data['lng'], inline=False)
+    embed.add_field(name="➢ IBGE", value=data['city_ibge'], inline=False)
+    embed.add_field(name="➢ DDD", value=data['ddd'], inline=False)
+    embed.set_author(name='ㅤㅤCONSULTA DE CEPㅤㅤㅤㅤ', icon_url='https://i.imgur.com/jjdljI4.png')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+####CONSULTA CÓDIGO BANCÁRIO
+
+@client.command()
+async def banco(ctx, banco):
+    data = requests.get(f"https://brasilapi.com.br/api/banks/v1/{banco}").json()
+
+    try:
+        error = data["message"]
+        embed = discord.Embed(
+            title='⚠️ CÓDIGO BANCÁRIO NÃO ENCONTRADO ⚠️',
+            description='',
+            colour=16766976
+        )
+
+        embed.set_author(name='', icon_url='')
+
+        await ctx.send(embed=embed)
+
+        return
+    except Exception:
+        pass
+
+        embed = discord.Embed(
+            title='',
+            colour=8963532
+        )
+
+    embed.add_field(name="➢ ISPB", value=data['ispb'], inline=False)
+    embed.add_field(name="➢ Nome do Banco", value=data['name'], inline=False)
+    embed.add_field(name="➢ Código Bancário", value=data['code'], inline=False)
+    embed.add_field(name="➢ Informações Adicionais", value=data['fullName'], inline=False)
+
+    embed.set_author(name='CONSULTA DE BANCO', icon_url='https://i.imgur.com/qbSHORU.png')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+####CONSULTA DE BIN
+
+@client.command()
+async def bin(ctx, bin):
+    data = requests.get(
+        f"https://api.bincodes.com/bin/?format=json&api_key=c0107d14acda7e1831dfe26ee8e8b3a5&bin={bin}").json()
+
+    try:
+        error = data["message"]
+        embed = discord.Embed(
+            title='⚠️ BIN NÃO ENCONTRADO ⚠️',
+            colour=16766976
+        )
+
+        await ctx.send(embed=embed)
+
+        return
+    except Exception:
+        pass
+
+        embed = discord.Embed(
+            title='',
+            colour=16711701
+        )
+
+    embed.add_field(name="➢ BIN", value=data['bin'], inline=False)
+    embed.add_field(name="➢ Modelo", value=data['type'], inline=False)
+    embed.add_field(name="➢ Nível", value=data['level'], inline=False)
+    embed.add_field(name="➢ Bandeira", value=data['card'], inline=False)
+    embed.add_field(name="➢ País", value=data['country'], inline=False)
+    embed.add_field(name="➢ Sigla do País", value=data['countrycode'], inline=False)
+    embed.add_field(name="➢ Banco", value=data['bank'], inline=False)
+
+    embed.set_author(name='ㅤㅤㅤCONSULTA DE BINㅤㅤㅤㅤㅤㅤ', icon_url='https://i.imgur.com/G0N3JFZ.png')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+####CONSULTA DE SITE
+
+
+@client.command()
+async def site(ctx, site):
+    data = requests.get(f"http://ipwhois.app/json/{site}").json()
+
+    try:
+        error = data["message"]
+        embed = discord.Embed(
+            title='⚠️ SITE NÃO ENCONTRADO ⚠️',
+            description='',
+            colour=16766976
+        )
+
+        embed.set_author(name='', icon_url='')
+
+        await ctx.send(embed=embed)
+
+        return
+    except Exception:
+        pass
+
+        embed = discord.Embed(
+            title='',
+            colour=58879
+        )
+
+    embed.add_field(name="➢ IP", value=data['ip'], inline=False)
+    embed.add_field(name="➢ Cidade", value=data['city'], inline=False)
+    embed.add_field(name="➢ Estado", value=data['region'], inline=False)
+    embed.add_field(name="➢ País", value=data['country'], inline=False)
+    embed.add_field(name="➢ Latitude", value=data['latitude'], inline=False)
+    embed.add_field(name="➢ Longitude", value=data['longitude'], inline=False)
+    embed.add_field(name="➢ Organização", value=data['isp'], inline=False)
+    embed.add_field(name="➢ Empresa", value=data['org'], inline=False)
+    embed.add_field(name="➢ Fuso Horário", value=data['timezone'], inline=False)
+
+    embed.set_author(name='ㅤㅤCONSULTA DE SITEㅤㅤㅤㅤㅤ', icon_url='https://i.imgur.com/J0Q3wLQ.gif')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+@client.command()
+async def criador(ctx):
+    embed = discord.Embed(
+        title='CRIADOR DO BOT ALIEN.py',
+        url="https://github.com/ALIENxp",
+        description='Olá, me chamo ***Cristopher***, tenho 17 anos e sou o criador do BOT ***ALIEN.py***, sou estudante do ensino médio, estudante de Segurança da Informação/Ethical Hacking e programador ***iniciante*** em Python.',
+        colour=9013641
+    )
+
+    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/YJe096i.png')
+
+    embed.set_image(url='https://i.imgur.com/Ch8f0qs.png')
+
+    embed.add_field(name="𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌", value="***@alienpy***", inline=True)
+
+    embed.add_field(name="𝐆𝐈𝐓𝐇𝐔𝐁", value="***ALIENxp***", inline=True)
+
+    await ctx.send(embed=embed)
+
+
+@client.command()
+async def geradores(ctx):
+    embed = discord.Embed(
+        title='',
+        description='',
+        colour=16711680
+    )
+
+    embed.add_field(name="👥 GERADOR DE PESSOA", value="Use o comando ***./gerarpessoa*** para gerar uma pessoa.",
+                    inline=False)
+    embed.add_field(name="💳 GERADOR DE CARTÃO",
+                    value="Use o comando ***./gerarcartao*** para gerar um cartão Debito/Crédito.", inline=False)
+    embed.add_field(name="📁 GERADOR DE E-MAIL",
+                    value="Use o comando ***./geraremail*** para gerar um e-mail aleatório.", inline=False)
+    embed.add_field(name="🔆 GERADOR DE CPF", value="Use o comando ***./gerarcpf*** para gerar e validar um CPF.",
+                    inline=False)
+    embed.add_field(name="🎮 GERADOR DE USERNAME", value="Use o comando ***./gerarusr*** para gerar um username.",
+                    inline=False)
+    embed.add_field(name="🔐 GERADOR DE SENHA", value="Use o comando ***./gerarsenha*** para gerar uma senha.",
+                    inline=False)
+    embed.add_field(name="🚙 GERADOR DE VEÍCULO", value="Use o comando ***./gerarveiculo*** para gerar um veículo.",
+                    inline=False)
+    embed.add_field(name="📞 GERADOR DE NÚMERO TELEFONE",
+                    value="Use o comando ***./gerartel*** para gerar um telefone.", inline=False)
+    embed.add_field(name="📲 GERADOR DE IMEI", value="Use o comando ***./gerarimei*** para gerar um IMEI.",
+                    inline=False)
+
+    embed.set_image(url='https://i.imgur.com/VNR7bn7.gif')
+
+    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/BsUr783.png')
+
+    embed.set_footer(text='ALIEN.py © All Rights Reserved', icon_url='https://i.imgur.com/Pn0zQ5S.jpg')
+
+    await ctx.send(embed=embed)
+
+
+@client.command()
+async def infobot(ctx):
+    embed = discord.Embed(
+        title='SOBRE O ALIEN.py',
+        description='O BOT **ALIEN.py** é um robô multifuncional equipado com comandos de moderação, consultas, checkers etc. Atualmente, encontra-se em versão beta!',
+        colour=13107455
+    )
+
+    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/fv0LVrD.gif')
+
+    embed.set_image(url='https://media.giphy.com/media/XTFDgzeOD0lzD449d8/giphy.gif')
+
+    embed.add_field(name="🐍 𝐋𝐈𝐍𝐆𝐔𝐀𝐆𝐄𝐌",
+                    value="O ***ALIEN.py*** foi criado inteiramente na linguagem ***[𝐏𝐘𝐓𝐇𝐎𝐍]***", inline=False)
+
+    embed.add_field(name="👽 𝐂𝐑𝐈𝐀𝐃𝐎𝐑",
+                    value="Use o comando ***./criador*** para ver mais informações sobre o criador.", inline=False)
+
+    embed.add_field(name="🤖 𝐒𝐔𝐆𝐄𝐒𝐓𝐎𝐄𝐒",
+                    value="Quer reportar um Bug ou fazer alguma indicação de melhoria? Digite ***./sugestao*** para ver os meios de contato.",
+                    inline=False)
+
+    embed.set_footer(text='ALIEN.py © All Rights Reserved', icon_url='https://i.imgur.com/Pn0zQ5S.jpg')
+
+    await ctx.send(embed=embed)
+
+
+@client.command()
+async def ping(ctx):
+    embed = discord.Embed(
+        title='',
+        description=(f'𝘚𝘌𝘜 𝘗𝘐𝘕𝘎 𝘌 𝘋𝘌 𝘈𝘗𝘙𝘖𝘟𝘐𝘔𝘈𝘋𝘈𝘔𝘌𝘕𝘛𝘌 (𝘔𝘚)'),
+        colour=16562691
+    )
+
+    embed.add_field(name='🌥 Teste 1', value=f"{round(client.latency * 100)} ms", inline=False)
+    embed.add_field(name='🌧 Teste 2', value=f"{round(client.latency * 500)} ms", inline=False)
+    embed.add_field(name='🌩 Teste 3', value=f"{round(client.latency * 1000)} ms", inline=False)
+
+    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/mbOkvKc.gif')
+
+    embed.set_image(url='')
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+
+
+@client.command()
+async def sugestao(ctx):
+    embed = discord.Embed(
+        title='DÚVIDAS / SUGESTÕES', url="",
+        description='Ficou com alguma dúvida? gostaria de dar sugestões ou até mesmo fazer críticas ***construtivas***? Você poderá entrar em contato através de meu e-mail... Ficarei extremamente feliz em poder ouvi-los! Estamos trabalhando diariamente em atualizações para poder trazer as melhores experiências para os usuários.\n',
+        colour=6646071
+    )
+
+    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/etDhBip.gif')
+
+    embed.set_image(url='https://i.imgur.com/Pn0zQ5S.jpg')
+
+    embed.add_field(name="E-MAIL", value="alien.py@protonmail.com", inline=False)
+
+    embed.add_field(name="APOIE MEU TRABALHO  💚", value="Chave PIX: d1651eb8-4c84-4b2b-b60a-9e3884cea92d",
+                    inline=False)
+
+    await ctx.send(embed=embed)
+
+
+client.run('ODk0MDE0Nzk2Nzc1NjkwMjcw.YVj2KQ.FEAD-4KbJnqedkB7z57aREhipEc')
