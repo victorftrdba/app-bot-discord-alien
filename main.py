@@ -567,7 +567,7 @@ async def ping(ctx):
 async def sugestao(ctx):
     embed = discord.Embed(
         title='DÚVIDAS / SUGESTÕES', url="",
-        description='Ficou com alguma dúvida? gostaria de dar sugestões ou até mesmo fazer críticas ***construtivas***? Você poderá entrar em contato através do e-mail ou Instagram abaixo... Nós Ficaremos extremamente felizes em poder ouvi-los! Estamos trabalhando diariamente em atualizações para poder trazer as melhores experiências para os usuários.\n',
+        description='Ficou com alguma dúvida? gostaria de dar sugestões ou até mesmo fazer críticas ***construtivas***? Ficaremos extremamente felize em poder ouvi-los! Estamos trabalhando diariamente em atualizações para poder trazer as melhores experiências para os usuários.\n',
         colour=6646071
     )
 
