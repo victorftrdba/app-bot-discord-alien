@@ -360,7 +360,7 @@ async def banco(ctx, banco):
     embed.add_field(name="➢ Código Bancário", value=data['code'], inline=False)
     embed.add_field(name="➢ Informações Adicionais", value=data['fullName'], inline=False)
 
-    embed.set_author(name='CONSULTA DE BANCO', icon_url='https://i.imgur.com/qbSHORU.png')
+    embed.set_author(name='CONSULTA DE BANCO', icon_url='https://cdn-icons.flaticon.com/png/512/3881/premium/3881900.png?token=exp=1641260404~hmac=625a68c0090cf15ae6dfc66a15a87e61')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
