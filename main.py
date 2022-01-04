@@ -225,7 +225,7 @@ async def ip(ctx, ip):
 
         embed = discord.Embed(
             title='',
-            colour=8910161
+            colour=10441
         )
 
     embed.add_field(name="➢ IP", value=data['ip'], inline=False)
@@ -238,7 +238,7 @@ async def ip(ctx, ip):
     embed.add_field(name="➢ Empresa Responsável", value=data['org'], inline=False)
     embed.add_field(name="➢ Tipo de Conexão", value=data['type'], inline=False)
 
-    embed.set_author(name='ㅤﾠㅤ   CONSULTA DE IP', icon_url='https://cdn-icons-png.flaticon.com/512/1486/1486488.png')
+    embed.set_author(name='ㅤﾠㅤ   CONSULTA DE IP', icon_url='https://cdn-icons-png.flaticon.com/512/6434/6434897.png')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
@@ -279,7 +279,7 @@ async def covid(ctx, covid):
     embed.add_field(name="➢ Suspeitos", value=data['suspects'], inline=False)
     embed.add_field(name="➢ Descartados", value=data['refuses'], inline=False)
     embed.add_field(name="➢ Atualização", value=data['datetime'], inline=False)
-    embed.set_author(name='ㅤCONSULTA DE COVID19ㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/5841/premium/5841945.png?token=exp=1641266699~hmac=35b1a0eb5b002de5b1a82a3adff98bf6')
+    embed.set_author(name='ㅤCONSULTA DE COVID19ㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/5428/premium/5428573.png?token=exp=1641268025~hmac=fb2ee7ad00ddbf8a5a1cf67a15f04945')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
@@ -359,7 +359,7 @@ async def banco(ctx, banco):
     embed.add_field(name="➢ Código Bancário", value=data['code'], inline=False)
     embed.add_field(name="➢ Informações Adicionais", value=data['fullName'], inline=False)
 
-    embed.set_author(name='ㅤㅤㅤCONSULTA DE BANCOㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/1041/premium/1041584.png?token=exp=1641266545~hmac=506f329c4c0c70a61d42fe5f4abea701')
+    embed.set_author(name='ㅤㅤㅤCONSULTA DE BANCOㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/1041/premium/1041584.png?token=exp=1641266545~hmac=506f329c4c0c70a61d42fe5f4abea701')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
@@ -400,7 +400,7 @@ async def bin(ctx, bin):
     embed.add_field(name="➢ Sigla do País", value=data['countrycode'], inline=False)
     embed.add_field(name="➢ Banco", value=data['bank'], inline=False)
 
-    embed.set_author(name='ㅤㅤㅤCONSULTA DE BINㅤㅤㅤㅤㅤㅤ', icon_url='https://cdn-icons-png.flaticon.com/512/178/178964.png')
+    embed.set_author(name='ㅤㅤㅤCONSULTA DE BINㅤㅤㅤㅤㅤㅤ', icon_url='https://i.imgur.com/U18eyhV.png')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
