@@ -194,7 +194,7 @@ async def cnpj(ctx, cnpj):
     embed.add_field(name="➢ CNAE", value=data['CNAE PRINCIPAL DESCRICAO'], inline=False)
     embed.add_field(name="➢ CNAE Código", value=data['CNAE PRINCIPAL CODIGO'], inline=False)
     embed.add_field(name="➢ CNAE Código", value=data['COMPLEMENTO'], inline=False)
-    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons-png.flaticon.com/512/3696/3696500.png')
+    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons-png.flaticon.com/512/4514/4514089.png')
     
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
