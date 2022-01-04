@@ -177,7 +177,7 @@ async def cnpj(ctx, cnpj):
 
         embed = discord.Embed(
             title='',
-            colour=16749824
+            colour=8910161
         )
 
     embed.add_field(name="➢ CNPJ", value=data['CNPJ'], inline=False)
@@ -194,7 +194,7 @@ async def cnpj(ctx, cnpj):
     embed.add_field(name="➢ CNAE", value=data['CNAE PRINCIPAL DESCRICAO'], inline=False)
     embed.add_field(name="➢ CNAE Código", value=data['CNAE PRINCIPAL CODIGO'], inline=False)
     embed.add_field(name="➢ CNAE Código", value=data['COMPLEMENTO'], inline=False)
-    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons-png.flaticon.com/512/4514/4514089.png')
+    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons.flaticon.com/png/512/4151/premium/4151858.png?token=exp=1641266909~hmac=2cddb88d70dc89e429a8175901424a57')
     
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
@@ -225,7 +225,7 @@ async def ip(ctx, ip):
 
         embed = discord.Embed(
             title='',
-            colour=7799031
+            colour=8910161
         )
 
     embed.add_field(name="➢ IP", value=data['ip'], inline=False)
@@ -238,7 +238,7 @@ async def ip(ctx, ip):
     embed.add_field(name="➢ Empresa Responsável", value=data['org'], inline=False)
     embed.add_field(name="➢ Tipo de Conexão", value=data['type'], inline=False)
 
-    embed.set_author(name='ㅤﾠㅤ   CONSULTA DE IP', icon_url='https://i.imgur.com/4t6xiCR.gif')
+    embed.set_author(name='ㅤﾠㅤ   CONSULTA DE IP', icon_url='https://cdn-icons-png.flaticon.com/512/1486/1486488.png')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
@@ -279,7 +279,7 @@ async def covid(ctx, covid):
     embed.add_field(name="➢ Suspeitos", value=data['suspects'], inline=False)
     embed.add_field(name="➢ Descartados", value=data['refuses'], inline=False)
     embed.add_field(name="➢ Atualização", value=data['datetime'], inline=False)
-    embed.set_author(name='ㅤCONSULTA DE COVID19ㅤㅤㅤ', icon_url='https://i.imgur.com/YLqyyKG.png')
+    embed.set_author(name='ㅤCONSULTA DE COVID19ㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/5841/premium/5841945.png?token=exp=1641266699~hmac=35b1a0eb5b002de5b1a82a3adff98bf6')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
@@ -320,7 +320,7 @@ async def cep(ctx, cep):
     embed.add_field(name="➢ Longitude", value=data['lng'], inline=False)
     embed.add_field(name="➢ IBGE", value=data['city_ibge'], inline=False)
     embed.add_field(name="➢ DDD", value=data['ddd'], inline=False)
-    embed.set_author(name='ㅤㅤCONSULTA DE CEPㅤㅤㅤㅤ', icon_url='https://i.imgur.com/jjdljI4.png')
+    embed.set_author(name='ㅤㅤCONSULTA DE CEPㅤㅤㅤㅤ', icon_url='https://cdn-icons-png.flaticon.com/512/2642/2642502.png')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
@@ -351,7 +351,7 @@ async def banco(ctx, banco):
 
         embed = discord.Embed(
             title='',
-            colour=8963532
+            colour=7667888
         )
 
     embed.add_field(name="➢ ISPB", value=data['ispb'], inline=False)
@@ -359,7 +359,7 @@ async def banco(ctx, banco):
     embed.add_field(name="➢ Código Bancário", value=data['code'], inline=False)
     embed.add_field(name="➢ Informações Adicionais", value=data['fullName'], inline=False)
 
-    embed.set_author(name='CONSULTA DE BANCO', icon_url='https://cdn-icons-png.flaticon.com/512/2261/2261525.png')
+    embed.set_author(name='ㅤㅤㅤCONSULTA DE BANCOㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/1041/premium/1041584.png?token=exp=1641266545~hmac=506f329c4c0c70a61d42fe5f4abea701')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
