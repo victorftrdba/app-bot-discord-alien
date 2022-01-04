@@ -480,23 +480,23 @@ async def geradores(ctx):
         colour=16711680
     )
 
-    embed.add_field(name="👥 GERADOR DE PESSOA", value="Use o comando ***./gerarpessoa*** para gerar uma pessoa.",
+    embed.add_field(name="👥 GERADOR DE PESSOA", value="Use o comando ****a!gerarpessoa*** para gerar uma pessoa.",
                     inline=False)
     embed.add_field(name="💳 GERADOR DE CARTÃO",
-                    value="Use o comando ***./gerarcartao*** para gerar um cartão Debito/Crédito.", inline=False)
+                    value="Use o comando ****a!gerarcartao*** para gerar um cartão Debito/Crédito.", inline=False)
     embed.add_field(name="📁 GERADOR DE E-MAIL",
-                    value="Use o comando ***./geraremail*** para gerar um e-mail aleatório.", inline=False)
-    embed.add_field(name="🔆 GERADOR DE CPF", value="Use o comando ***./gerarcpf*** para gerar e validar um CPF.",
+                    value="Use o comando ****a!geraremail*** para gerar um e-mail aleatório.", inline=False)
+    embed.add_field(name="🔆 GERADOR DE CPF", value="Use o comando ****a!gerarcpf*** para gerar e validar um CPF.",
                     inline=False)
-    embed.add_field(name="🎮 GERADOR DE USERNAME", value="Use o comando ***./gerarusr*** para gerar um username.",
+    embed.add_field(name="🎮 GERADOR DE USERNAME", value="Use o comando ****a!gerarusr*** para gerar um username.",
                     inline=False)
-    embed.add_field(name="🔐 GERADOR DE SENHA", value="Use o comando ***./gerarsenha*** para gerar uma senha.",
+    embed.add_field(name="🔐 GERADOR DE SENHA", value="Use o comando ****a!gerarsenha*** para gerar uma senha.",
                     inline=False)
-    embed.add_field(name="🚙 GERADOR DE VEÍCULO", value="Use o comando ***./gerarveiculo*** para gerar um veículo.",
+    embed.add_field(name="🚙 GERADOR DE VEÍCULO", value="Use o comando ****a!gerarveiculo*** para gerar um veículo.",
                     inline=False)
     embed.add_field(name="📞 GERADOR DE NÚMERO TELEFONE",
-                    value="Use o comando ***./gerartel*** para gerar um telefone.", inline=False)
-    embed.add_field(name="📲 GERADOR DE IMEI", value="Use o comando ***./gerarimei*** para gerar um IMEI.",
+                    value="Use o comando ****a!gerartel*** para gerar um telefone.", inline=False)
+    embed.add_field(name="📲 GERADOR DE IMEI", value="Use o comando ****a!gerarimei*** para gerar um IMEI.",
                     inline=False)
 
     embed.set_image(url='https://i.imgur.com/VNR7bn7.gif')
