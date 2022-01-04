@@ -194,9 +194,8 @@ async def cnpj(ctx, cnpj):
     embed.add_field(name="➢ CNAE", value=data['CNAE PRINCIPAL DESCRICAO'], inline=False)
     embed.add_field(name="➢ CNAE Código", value=data['CNAE PRINCIPAL CODIGO'], inline=False)
     embed.add_field(name="➢ CNAE Código", value=data['COMPLEMENTO'], inline=False)
-    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://i.imgur.com/dQDb3d1.png')
-    embed.set_image(url='https://c.tenor.com/9gUN8--cygQAAAAC/peaky-blinders-smoking.gif')
-
+    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons-png.flaticon.com/512/3696/3696500.png')
+    
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
@@ -360,7 +359,7 @@ async def banco(ctx, banco):
     embed.add_field(name="➢ Código Bancário", value=data['code'], inline=False)
     embed.add_field(name="➢ Informações Adicionais", value=data['fullName'], inline=False)
 
-    embed.set_author(name='CONSULTA DE BANCO', icon_url='https://cdn-icons.flaticon.com/png/512/3881/premium/3881900.png?token=exp=1641260404~hmac=625a68c0090cf15ae6dfc66a15a87e61')
+    embed.set_author(name='CONSULTA DE BANCO', icon_url='https://cdn-icons-png.flaticon.com/512/2261/2261525.png')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
