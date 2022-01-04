@@ -567,13 +567,15 @@ async def ping(ctx):
 async def sugestao(ctx):
     embed = discord.Embed(
         title='DÚVIDAS / SUGESTÕES', url="",
-        description='Ficou com alguma dúvida? gostaria de dar sugestões\nou até mesmo fazer críticas ***construtivas***?\nVocê poderá entrar em contato através do\ne-mail ou Instagram... Ficaremos extremamente feliz\nem poder ouvi-los! Estamos trabalhando diariamente em atualizações para poder trazer as melhores experiências para os usuários.\n',
+        description='Ficou com alguma dúvida? gostaria de dar sugestões ou até mesmo fazer críticas ***construtivas***? Você poderá entrar em contato através do e-mail ou Instagram abaixo... Nós Ficaremos extremamente felizes em poder ouvi-los! Estamos trabalhando diariamente em atualizações para poder trazer as melhores experiências para os usuários.\n',
         colour=6646071
     )
 
     embed.set_author(name='ALIEN.py', icon_url='')
 
     embed.set_image(url='https://i.imgur.com/Pn0zQ5S.jpg')
+
+    embed.add_field(name="INSTAGRAM", value="@alien.pipy", inline=False)
 
     embed.add_field(name="E-MAIL", value="alien.py@protonmail.com", inline=False)
 
