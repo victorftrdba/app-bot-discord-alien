@@ -86,7 +86,7 @@ async def consulta(ctx):
     await ctx.send(embed=embed)
 
 
-####CONSULTA DE NOME
+##CONSULTA DE NOME
 
 @client.command()
 async def nome(ctx):
@@ -103,7 +103,7 @@ async def nome(ctx):
     await ctx.send(embed=embed)
 
 
-####CONSULTA DE CPF
+##CONSULTA DE CPF
 
 @client.command()
 async def cpf(ctx):
@@ -202,7 +202,7 @@ async def cnpj(ctx, cnpj):
     await ctx.send(embed=embed)
 
 
-####CONSULTA DE IP
+##CONSULTA DE IP
 
 @client.command()
 async def ip(ctx, ip):
@@ -248,7 +248,7 @@ async def ip(ctx, ip):
     await ctx.send(embed=embed)
 
 
-####CONSULTA DE COVID19
+##CONSULTA DE COVID19
 
 @client.command()
 async def covid(ctx, covid):
@@ -287,7 +287,7 @@ async def covid(ctx, covid):
     await ctx.send(embed=embed)
 
 
-####CONSULTA DE CEP
+##CONSULTA DE CEP
 
 @client.command()
 async def cep(ctx, cep):
@@ -328,7 +328,7 @@ async def cep(ctx, cep):
     await ctx.send(embed=embed)
 
 
-####CONSULTA CÓDIGO BANCÁRIO
+##CONSULTA CÓDIGO BANCÁRIO
 
 @client.command()
 async def banco(ctx, banco):
@@ -367,7 +367,8 @@ async def banco(ctx, banco):
     await ctx.send(embed=embed)
 
 
-####CONSULTA DE BIN
+##CONSULTA DE BIN
+
 
 @client.command()
 async def bin(ctx, bin):
@@ -407,8 +408,7 @@ async def bin(ctx, bin):
     await ctx.send(embed=embed)
 
 
-####CONSULTA DE SITE
-
+##CONSULTA DE SITE
 
 @client.command()
 async def site(ctx, site):
@@ -451,7 +451,9 @@ async def site(ctx, site):
 
     await ctx.send(embed=embed)
 
-
+    
+##CRIADOR INFO
+    
 @client.command()
 async def criador(ctx):
     embed = discord.Embed(
@@ -472,6 +474,8 @@ async def criador(ctx):
     await ctx.send(embed=embed)
 
 
+##GERADORES
+    
 @client.command()
 async def geradores(ctx):
     embed = discord.Embed(
@@ -480,23 +484,23 @@ async def geradores(ctx):
         colour=16711680
     )
 
-    embed.add_field(name="👥 GERADOR DE PESSOA", value="Use o comando ****a!gerarpessoa*** para gerar uma pessoa.",
+    embed.add_field(name="👥 GERADOR DE PESSOA", value="Use o comando ***a!gerarpessoa*** para gerar uma pessoa.",
                     inline=False)
     embed.add_field(name="💳 GERADOR DE CARTÃO",
-                    value="Use o comando ****a!gerarcartao*** para gerar um cartão Debito/Crédito.", inline=False)
+                    value="Use o comando ***a!gerarcartao*** para gerar um cartão Debito/Crédito.", inline=False)
     embed.add_field(name="📁 GERADOR DE E-MAIL",
-                    value="Use o comando ****a!geraremail*** para gerar um e-mail aleatório.", inline=False)
-    embed.add_field(name="🔆 GERADOR DE CPF", value="Use o comando ****a!gerarcpf*** para gerar e validar um CPF.",
+                    value="Use o comando ***a!geraremail*** para gerar um e-mail aleatório.", inline=False)
+    embed.add_field(name="🔆 GERADOR DE CPF", value="Use o comando ***a!gerarcpf*** para gerar e validar um CPF.",
                     inline=False)
-    embed.add_field(name="🎮 GERADOR DE USERNAME", value="Use o comando ****a!gerarusr*** para gerar um username.",
+    embed.add_field(name="🎮 GERADOR DE USERNAME", value="Use o comando ***a!gerarusr*** para gerar um username.",
                     inline=False)
-    embed.add_field(name="🔐 GERADOR DE SENHA", value="Use o comando ****a!gerarsenha*** para gerar uma senha.",
+    embed.add_field(name="🔐 GERADOR DE SENHA", value="Use o comando ***a!gerarsenha*** para gerar uma senha.",
                     inline=False)
-    embed.add_field(name="🚙 GERADOR DE VEÍCULO", value="Use o comando ****a!gerarveiculo*** para gerar um veículo.",
+    embed.add_field(name="🚙 GERADOR DE VEÍCULO", value="Use o comando ***a!gerarveiculo*** para gerar um veículo.",
                     inline=False)
     embed.add_field(name="📞 GERADOR DE NÚMERO TELEFONE",
-                    value="Use o comando ****a!gerartel*** para gerar um telefone.", inline=False)
-    embed.add_field(name="📲 GERADOR DE IMEI", value="Use o comando ****a!gerarimei*** para gerar um IMEI.",
+                    value="Use o comando ***a!gerartel*** para gerar um telefone.", inline=False)
+    embed.add_field(name="📲 GERADOR DE IMEI", value="Use o comando ***a!gerarimei*** para gerar um IMEI.",
                     inline=False)
 
     embed.set_image(url='https://i.imgur.com/VNR7bn7.gif')
@@ -508,6 +512,8 @@ async def geradores(ctx):
     await ctx.send(embed=embed)
 
 
+##INFOBOT    
+    
 @client.command()
 async def infobot(ctx):
     embed = discord.Embed(
@@ -524,10 +530,10 @@ async def infobot(ctx):
                     value="O ***ALIEN.py*** foi criado inteiramente na linguagem ***[𝐏𝐘𝐓𝐇𝐎𝐍]***", inline=False)
 
     embed.add_field(name="👽 𝐂𝐑𝐈𝐀𝐃𝐎𝐑",
-                    value="Use o comando ***./criador*** para ver mais informações sobre o criador.", inline=False)
+                    value="Use o comando ***a!criador*** para ver mais informações sobre o criador.", inline=False)
 
     embed.add_field(name="🤖 𝐒𝐔𝐆𝐄𝐒𝐓𝐎𝐄𝐒",
-                    value="Quer reportar um Bug ou fazer alguma indicação de melhoria? Digite ***./sugestao*** para ver os meios de contato.",
+                    value="Quer reportar um Bug ou fazer alguma indicação de melhoria? Digite ***a!sugestao*** para ver os meios de contato.",
                     inline=False)
 
     embed.set_footer(text='ALIEN.py © All Rights Reserved', icon_url='https://i.imgur.com/Pn0zQ5S.jpg')
@@ -535,6 +541,8 @@ async def infobot(ctx):
     await ctx.send(embed=embed)
 
 
+##FERRAMENTE PARA TESTAR PING    
+    
 @client.command()
 async def ping(ctx):
     embed = discord.Embed(
@@ -556,6 +564,8 @@ async def ping(ctx):
     await ctx.send(embed=embed)
 
 
+##SUGESTÕES DE MELHORIAS    
+    
 @client.command()
 async def sugestao(ctx):
     embed = discord.Embed(
