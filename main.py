@@ -400,7 +400,7 @@ async def bin(ctx, bin):
     embed.add_field(name="➢ Sigla do País", value=data['countrycode'], inline=False)
     embed.add_field(name="➢ Banco", value=data['bank'], inline=False)
 
-    embed.set_author(name='ㅤㅤㅤCONSULTA DE BINㅤㅤㅤㅤㅤㅤ', icon_url='https://i.imgur.com/G0N3JFZ.png')
+    embed.set_author(name='ㅤㅤㅤCONSULTA DE BINㅤㅤㅤㅤㅤㅤ', icon_url='https://cdn-icons-png.flaticon.com/512/178/178964.png')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
@@ -444,31 +444,9 @@ async def site(ctx, site):
     embed.add_field(name="➢ Empresa", value=data['org'], inline=False)
     embed.add_field(name="➢ Fuso Horário", value=data['timezone'], inline=False)
 
-    embed.set_author(name='ㅤㅤCONSULTA DE SITEㅤㅤㅤㅤㅤ', icon_url='https://i.imgur.com/J0Q3wLQ.gif')
+    embed.set_author(name='ㅤㅤCONSULTA DE SITEㅤㅤㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/1674/premium/1674664.png?token=exp=1641266283~hmac=206820b19833d3a7734c6022ed5776bc')
 
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
-
-    await ctx.send(embed=embed)
-
-    
-##CRIADOR INFO
-    
-@client.command()
-async def criador(ctx):
-    embed = discord.Embed(
-        title='CRIADOR DO BOT ALIEN.py',
-        url="https://github.com/ALIENxp",
-        description='Olá, me chamo ***Cristopher***, tenho 17 anos e sou o criador do BOT ***ALIEN.py***, sou estudante do ensino médio, estudante de Segurança da Informação/Ethical Hacking e programador ***iniciante*** em Python.',
-        colour=9013641
-    )
-
-    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/YJe096i.png')
-
-    embed.set_image(url='https://i.imgur.com/Ch8f0qs.png')
-
-    embed.add_field(name="𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌", value="***@alienpy***", inline=True)
-
-    embed.add_field(name="𝐆𝐈𝐓𝐇𝐔𝐁", value="***ALIENxp***", inline=True)
 
     await ctx.send(embed=embed)
 
@@ -476,11 +454,11 @@ async def criador(ctx):
 ##GERADORES
     
 @client.command()
-async def geradores(ctx):
+async def gerador(ctx):
     embed = discord.Embed(
         title='',
         description='',
-        colour=16711680
+        colour=6356774
     )
 
     embed.add_field(name="👥 GERADOR DE PESSOA", value="Use o comando ***a!gerarpessoa*** para gerar uma pessoa.",
@@ -502,9 +480,9 @@ async def geradores(ctx):
     embed.add_field(name="📲 GERADOR DE IMEI", value="Use o comando ***a!gerarimei*** para gerar um IMEI.",
                     inline=False)
 
-    embed.set_image(url='https://i.imgur.com/VNR7bn7.gif')
+    embed.set_image(url='')
 
-    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/BsUr783.png')
+    embed.set_author(name='ALIEN.py', icon_url='https://cdn-icons-png.flaticon.com/512/6498/6498012.png')
 
     embed.set_footer(text='ALIEN.py © All Rights Reserved', icon_url='https://i.imgur.com/Pn0zQ5S.jpg')
 
@@ -521,15 +499,12 @@ async def infobot(ctx):
         colour=13107455
     )
 
-    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/fv0LVrD.gif')
+    embed.set_author(name='ALIEN.py', icon_url='https://thumbs.gfycat.com/PlayfulCandidCalf-max-1mb.gif')
 
     embed.set_image(url='https://media.giphy.com/media/XTFDgzeOD0lzD449d8/giphy.gif')
 
     embed.add_field(name="🐍 𝐋𝐈𝐍𝐆𝐔𝐀𝐆𝐄𝐌",
                     value="O ***ALIEN.py*** foi criado inteiramente na linguagem ***[𝐏𝐘𝐓𝐇𝐎𝐍]***", inline=False)
-
-    embed.add_field(name="👽 𝐂𝐑𝐈𝐀𝐃𝐎𝐑",
-                    value="Use o comando ***a!criador*** para ver mais informações sobre o criador.", inline=False)
 
     embed.add_field(name="🤖 𝐒𝐔𝐆𝐄𝐒𝐓𝐎𝐄𝐒",
                     value="Quer reportar um Bug ou fazer alguma indicação de melhoria? Digite ***a!sugestao*** para ver os meios de contato.",
@@ -567,7 +542,7 @@ async def ping(ctx):
 async def sugestao(ctx):
     embed = discord.Embed(
         title='DÚVIDAS / SUGESTÕES', url="",
-        description='Ficou com alguma dúvida? gostaria de dar sugestões ou até mesmo fazer críticas ***construtivas***? Ficaremos extremamente felize em poder ouvi-los! Estamos trabalhando diariamente em atualizações para poder trazer as melhores experiências para os usuários.\n',
+        description='Ficou com alguma dúvida? gostaria de dar sugestões ou até mesmo fazer críticas ***construtivas***? Ficaremos extremamente feliz em poder ouvi-los! Estamos sempre trabalhando em atualizações futuras para poder trazer as melhores experiências para os usuários.\n',
         colour=6646071
     )
 
