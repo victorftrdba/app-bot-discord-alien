@@ -546,15 +546,13 @@ async def infobot(ctx):
 async def ping(ctx):
     embed = discord.Embed(
         title='',
-        description=(f'𝘚𝘌𝘜 𝘗𝘐𝘕𝘎 𝘌 𝘋𝘌 𝘈𝘗𝘙𝘖𝘟𝘐𝘔𝘈𝘋𝘈𝘔𝘌𝘕𝘛𝘌 (𝘔𝘚)'),
         colour=16562691
     )
 
-    embed.add_field(name='🌥 Teste 1', value=f"{round(client.latency * 100)} ms", inline=False)
-    embed.add_field(name='🌧 Teste 2', value=f"{round(client.latency * 500)} ms", inline=False)
-    embed.add_field(name='🌩 Teste 3', value=f"{round(client.latency * 1000)} ms", inline=False)
+    embed.add_field(name='👤 PING DO USUÁRIO', value=f"{round(client.latency * 500)} ms", inline=False)
+    embed.add_field(name='🖥️ PING DO SERVIDOR ', value=f"{round(client.latency * 1000)} ms", inline=False)
 
-    embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/mbOkvKc.gif')
+    embed.set_author(name='ㅤㅤㅤCONSULTA DE PING', icon_url='https://cdn-icons-png.flaticon.com/512/2695/2695903.png')
 
     embed.set_image(url='')
 
