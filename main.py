@@ -10,7 +10,7 @@ client = commands.Bot(command_prefix=".", case_insensitive=False)
 
 @client.event
 async def on_ready():
-    activity = discord.Game(name='Ajuda? Digite .ajuda 👽', type=3)
+    activity = discord.Game(name='Digite .ajuda 👽', type=3)
     await client.change_presence(status=discord.Status.idle, activity=activity)
     print("Conectando, por favor, aguarde...")
 
