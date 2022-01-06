@@ -85,17 +85,6 @@ async def ajuda(ctx):
 
     embed.add_field(name="🔐 Moderação", value='Use o comando `/admin` para ver os comandos administrativos. Comando de moderação existentes: `/kick`, `/ban`, `unban`, `/role`, `/mute`, `/clear` ', inline=False)
     embed.add_field(name="🔍 Consultas", value='Use o comando `/consulta` para obter mais informações. Comandos de consultas existentes: `/nome`, `/cpf`, `/telefone`, `/cnpj`, `/placa`, `/ip` `/bin`, `/cep`, `/covid`, `/banco`, `/site`', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
-    embed.add_field(name="", value='', inline=False)
 
     embed.set_author(name='🔮 A AJUDA CHEGOU 🔮', icon_url='')
 
