@@ -35,6 +35,7 @@ async def clear_error(ctx, error):
 
 @client.command()
 async def consulta(ctx):
+    
     embed = discord.Embed(
         title='',
         description='',
@@ -43,44 +44,30 @@ async def consulta(ctx):
 
     embed.add_field(name="🕵🏻‍♂️ 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗡𝗢𝗠𝗘",
                     value="Use o comando ***a!nome*** {Nome Completo} para realizar a consulta.", inline=False)
-
     embed.add_field(name="👽 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗣𝗙",
                     value="Use o comando ***a!cpf*** {CPF da Pessoa} para a consultar os dados.", inline=False)
-
     embed.add_field(name="📵 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗧𝗘𝗟𝗘𝗙𝗢𝗡𝗘",
                     value="Use o comando ***a!telefone*** {Telefone} para realizar a consulta.", inline=False)
-
     embed.add_field(name="🏨 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗡𝗣𝗝",
                     value="Use o comando ***a!cnpj*** {CNPJ} para consultar os dados.", inline=False)
-
     embed.add_field(name="🚘 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗣𝗟𝗔𝗖𝗔",
                     value="Use o comando ***a!placa*** {Placa do veículo} para realizar a consulta.", inline=False)
-
     embed.add_field(name="📌 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗜𝗣",
                     value="Use o comando ***a!ip*** {IP} para realizar a consulta do IP.", inline=False)
-
     embed.add_field(name="💳 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗕𝗜𝗡",
                     value="Use o comando ***a!bin*** {Número da BIN} para realizar a consulta.", inline=False)
-
     embed.add_field(name="📫 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗘𝗣",
                     value="Use o comando ***a!cep*** {CEP da Rua} para realizar a consulta.", inline=False)
-
     embed.add_field(name="🦠 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗢𝗩𝗜𝗗",
                     value="Use o comando ***a!covid*** {Sigla do Estado} para realizar a consulta.", inline=False)
-
     embed.add_field(name="🏦 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗕𝗔𝗡𝗖𝗢",
                     value="Use o comando ***a!banco*** {Código do Banco} para realizar a consulta.", inline=False)
-
     embed.add_field(name="💾 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗦𝗜𝗧𝗘",
                     value="Use o comando ***a!site*** {URL do site} para realizar a consulta.", inline=False)
-
     embed.add_field(name="💰 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗠𝗢𝗘𝗗𝗔",
                     value="Use o comando ***a!moeda*** ex:{USD/BRL} para realizar a consulta.", inline=False)
-
     embed.set_image(url='https://i.gifer.com/Cewn.gif')
-
     embed.set_author(name='ALIEN.py', icon_url='https://i.imgur.com/3GksSgz.png')
-
     embed.set_footer(text='ALIEN.py © All Rights Reserved', icon_url='https://i.imgur.com/Pn0zQ5S.jpg')
 
     await ctx.send(embed=embed)
@@ -90,6 +77,7 @@ async def consulta(ctx):
 
 @client.command()
 async def nome(ctx):
+    
     embed = discord.Embed(
         title='',
         description='USE O COMANDO /nome {nome da pessoa} para consultar',
@@ -97,7 +85,6 @@ async def nome(ctx):
     )
 
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE NOME', icon_url='')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
@@ -107,6 +94,7 @@ async def nome(ctx):
 
 @client.command()
 async def cpf(ctx):
+    
     embed = discord.Embed(
         title='',
         description='A Consulta por ***CPF*** estará disponível em breve. No momento,\nestamos com ***ausência*** das APIs de consultas por ***CPF!***',
@@ -114,7 +102,6 @@ async def cpf(ctx):
     )
 
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CPF', icon_url='')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
@@ -124,6 +111,7 @@ async def cpf(ctx):
 
 @client.command()
 async def telefone(ctx):
+    
     embed = discord.Embed(
         title='',
         description='A Consulta por ***TELEFONE*** estará disponível em breve. No momento,\nestamos com ***ausência*** das APIs de consultas por ***telefone!***',
@@ -131,7 +119,6 @@ async def telefone(ctx):
     )
 
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE TELEFONE', icon_url='')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
@@ -141,6 +128,7 @@ async def telefone(ctx):
 
 @client.command()
 async def placa(ctx):
+    
     embed = discord.Embed(
         title='',
         description='A Consulta por ***PLACA*** estará disponível em breve. No momento,\nestamos com ***ausência*** das APIs de consultas por ***placa!***',
@@ -148,16 +136,15 @@ async def placa(ctx):
     )
 
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE PLACA', icon_url='')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
-
 
 ##CONSULTA DE CNPJ
 
 @client.command()
 async def cnpj(ctx, cnpj):
+    
     data = requests.get(f"https://api-publica.speedio.com.br/buscarcnpj?cnpj={cnpj}").json()
 
     try:
@@ -175,10 +162,10 @@ async def cnpj(ctx, cnpj):
     except Exception:
         pass
 
-        embed = discord.Embed(
-            title='',
-            colour=8910161
-        )
+    embed = discord.Embed(
+        title='',
+        colour=8910161
+    )
 
     embed.add_field(name="➢ CNPJ", value=data['CNPJ'], inline=False)
     embed.add_field(name="➢ Nome Fantasia", value=data['NOME FANTASIA'], inline=False)
@@ -195,16 +182,15 @@ async def cnpj(ctx, cnpj):
     embed.add_field(name="➢ CNAE Código", value=data['CNAE PRINCIPAL CODIGO'], inline=False)
     embed.add_field(name="➢ CNAE Código", value=data['COMPLEMENTO'], inline=False)
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons.flaticon.com/png/512/4151/premium/4151858.png?token=exp=1641266909~hmac=2cddb88d70dc89e429a8175901424a57')
-    
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
-
 
 ##CONSULTA DE IP
 
 @client.command()
 async def ip(ctx, ip):
+    
     data = requests.get(f"http://ipwhois.app/json/{ip}").json()
 
     try:
@@ -223,10 +209,10 @@ async def ip(ctx, ip):
     except Exception:
         pass
 
-        embed = discord.Embed(
-            title='',
-            colour=10441
-        )
+    embed = discord.Embed(
+        title='',
+        colour=10441
+    )
 
     embed.add_field(name="➢ IP", value=data['ip'], inline=False)
     embed.add_field(name="➢ Cidade", value=data['city'], inline=False)
@@ -237,20 +223,17 @@ async def ip(ctx, ip):
     embed.add_field(name="➢ Provedor", value=data['isp'], inline=False)
     embed.add_field(name="➢ Empresa Responsável", value=data['org'], inline=False)
     embed.add_field(name="➢ Tipo de Conexão", value=data['type'], inline=False)
-
     embed.set_author(name='ㅤﾠㅤ   CONSULTA DE IP', icon_url='https://cdn-icons-png.flaticon.com/512/6434/6434897.png')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
-
     embed.set_thumbnail(url=data['country_flag'])
 
     await ctx.send(embed=embed)
-
 
 ##CONSULTA DE COVID19
 
 @client.command()
 async def covid(ctx, covid):
+    
     data = requests.get(f"https://covid19-brazil-api.vercel.app/api/report/v1/brazil/uf/{covid}").json()
 
     try:
@@ -268,10 +251,10 @@ async def covid(ctx, covid):
     except Exception:
         pass
 
-        embed = discord.Embed(
-            title='',
-            colour=13841202
-        )
+    embed = discord.Embed(
+        title='',
+        colour=13841202
+    )
 
     embed.add_field(name="➢ Estado", value=data['state'], inline=False)
     embed.add_field(name="➢ Casos", value=data['cases'], inline=False)
@@ -280,16 +263,15 @@ async def covid(ctx, covid):
     embed.add_field(name="➢ Descartados", value=data['refuses'], inline=False)
     embed.add_field(name="➢ Atualização", value=data['datetime'], inline=False)
     embed.set_author(name='ㅤCONSULTA DE COVID19ㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/5428/premium/5428573.png?token=exp=1641268025~hmac=fb2ee7ad00ddbf8a5a1cf67a15f04945')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
-
 
 ##CONSULTA DE CEP
 
 @client.command()
 async def cep(ctx, cep):
+    
     data = requests.get(f"https://cep.awesomeapi.com.br/json/{cep}").json()
 
     try:
@@ -305,10 +287,10 @@ async def cep(ctx, cep):
     except Exception:
         pass
 
-        embed = discord.Embed(
-            title='',
-            colour=4236377
-        )
+    embed = discord.Embed(
+        title='',
+        colour=4236377
+    )
 
     embed.add_field(name="➢ CEP", value=data['cep'], inline=False)
     embed.add_field(name="➢ Rua", value=data['address'], inline=False)
@@ -321,16 +303,15 @@ async def cep(ctx, cep):
     embed.add_field(name="➢ IBGE", value=data['city_ibge'], inline=False)
     embed.add_field(name="➢ DDD", value=data['ddd'], inline=False)
     embed.set_author(name='ㅤㅤCONSULTA DE CEPㅤㅤㅤㅤ', icon_url='https://cdn-icons-png.flaticon.com/512/2642/2642502.png')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
-
 
 ##CONSULTA CÓDIGO BANCÁRIO
 
 @client.command()
 async def banco(ctx, banco):
+    
     data = requests.get(f"https://brasilapi.com.br/api/banks/v1/{banco}").json()
 
     try:
@@ -349,28 +330,25 @@ async def banco(ctx, banco):
     except Exception:
         pass
 
-        embed = discord.Embed(
-            title='',
-            colour=7667888
-        )
+    embed = discord.Embed(
+        title='',
+        colour=7667888
+    )
 
     embed.add_field(name="➢ ISPB", value=data['ispb'], inline=False)
     embed.add_field(name="➢ Nome do Banco", value=data['name'], inline=False)
     embed.add_field(name="➢ Código Bancário", value=data['code'], inline=False)
     embed.add_field(name="➢ Informações Adicionais", value=data['fullName'], inline=False)
-
     embed.set_author(name='ㅤㅤㅤCONSULTA DE BANCOㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/1041/premium/1041584.png?token=exp=1641266545~hmac=506f329c4c0c70a61d42fe5f4abea701')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
 
-
 ##CONSULTA DE BIN
-
 
 @client.command()
 async def bin(ctx, bin):
+    
     data = requests.get(
         f"https://api.bincodes.com/bin/?format=json&api_key=c0107d14acda7e1831dfe26ee8e8b3a5&bin={bin}").json()
 
@@ -387,10 +365,10 @@ async def bin(ctx, bin):
     except Exception:
         pass
 
-        embed = discord.Embed(
-            title='',
-            colour=16711701
-        )
+    embed = discord.Embed(
+        title='',
+        colour=16711701
+    )
 
     embed.add_field(name="➢ BIN", value=data['bin'], inline=False)
     embed.add_field(name="➢ Modelo", value=data['type'], inline=False)
@@ -399,40 +377,20 @@ async def bin(ctx, bin):
     embed.add_field(name="➢ País", value=data['country'], inline=False)
     embed.add_field(name="➢ Sigla do País", value=data['countrycode'], inline=False)
     embed.add_field(name="➢ Banco", value=data['bank'], inline=False)
-
     embed.set_author(name='ㅤㅤㅤCONSULTA DE BINㅤㅤㅤㅤㅤㅤ', icon_url='https://i.imgur.com/U18eyhV.png')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
-
 
 ##CONSULTA DE SITE
 
 @client.command()
 async def site(ctx, site):
-    data = requests.get(f"http://ipwhois.app/json/{site}").json()
-
-    try:
-        error = data["message"]
-        embed = discord.Embed(
-            title='⚠️ SITE NÃO ENCONTRADO ⚠️',
-            description='',
-            colour=16766976
-        )
-
-        embed.set_author(name='', icon_url='')
-
-        await ctx.send(embed=embed)
-
-        return
-    except Exception:
-        pass
-
-        embed = discord.Embed(
-            title='',
-            colour=58879
-        )
+    
+    embed = discord.Embed(
+        title='',
+        colour=58879
+    )
 
     embed.add_field(name="➢ IP", value=data['ip'], inline=False)
     embed.add_field(name="➢ Cidade", value=data['city'], inline=False)
@@ -443,18 +401,16 @@ async def site(ctx, site):
     embed.add_field(name="➢ Organização", value=data['isp'], inline=False)
     embed.add_field(name="➢ Empresa", value=data['org'], inline=False)
     embed.add_field(name="➢ Fuso Horário", value=data['timezone'], inline=False)
-
-    embed.set_author(name='ㅤㅤCONSULTA DE SITEㅤㅤㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/1674/premium/1674664.png?token=exp=1641266283~hmac=206820b19833d3a7734c6022ed5776bc')
-
+    embed.set_author(name='USE ')
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
-
 
 ##GERADORES
     
 @client.command()
 async def gerador(ctx):
+    
     embed = discord.Embed(
         title='',
         description='',
@@ -479,20 +435,17 @@ async def gerador(ctx):
                     value="Use o comando ***a!gerartel*** para gerar um telefone.", inline=False)
     embed.add_field(name="📲 GERADOR DE IMEI", value="Use o comando ***a!gerarimei*** para gerar um IMEI.",
                     inline=False)
-
     embed.set_image(url='')
-
     embed.set_author(name='ALIEN.py', icon_url='https://cdn-icons-png.flaticon.com/512/6498/6498012.png')
-
     embed.set_footer(text='ALIEN.py © All Rights Reserved', icon_url='https://i.imgur.com/Pn0zQ5S.jpg')
 
     await ctx.send(embed=embed)
-
 
 ##INFOBOT    
     
 @client.command()
 async def infobot(ctx):
+    
     embed = discord.Embed(
         title='SOBRE O ALIEN.py',
         description='O BOT **ALIEN.py** é um robô multifuncional equipado com comandos de moderação, consultas, checkers etc. Atualmente, encontra-se em versão beta!',
@@ -500,25 +453,21 @@ async def infobot(ctx):
     )
 
     embed.set_author(name='ALIEN.py', icon_url='https://thumbs.gfycat.com/PlayfulCandidCalf-max-1mb.gif')
-
     embed.set_image(url='https://media.giphy.com/media/XTFDgzeOD0lzD449d8/giphy.gif')
-
     embed.add_field(name="🐍 𝐋𝐈𝐍𝐆𝐔𝐀𝐆𝐄𝐌",
                     value="O ***ALIEN.py*** foi criado inteiramente na linguagem ***[𝐏𝐘𝐓𝐇𝐎𝐍]***", inline=False)
-
     embed.add_field(name="🤖 𝐒𝐔𝐆𝐄𝐒𝐓𝐎𝐄𝐒",
                     value="Quer reportar um Bug ou fazer alguma indicação de melhoria? Digite ***a!sugestao*** para ver os meios de contato.",
                     inline=False)
-
     embed.set_footer(text='ALIEN.py © All Rights Reserved', icon_url='https://i.imgur.com/Pn0zQ5S.jpg')
 
     await ctx.send(embed=embed)
-
 
 ##FERRAMENTE PARA TESTAR PING    
     
 @client.command()
 async def ping(ctx):
+    
     embed = discord.Embed(
         title='',
         colour=29695
@@ -526,20 +475,17 @@ async def ping(ctx):
 
     embed.add_field(name='➢ Ping do usuário', value=f"{round(client.latency * 500)} ms", inline=False)
     embed.add_field(name='➢ Ping do servidor', value=f"{round(client.latency * 1000)} ms", inline=False)
-
     embed.set_author(name='ㅤㅤㅤCONSULTA DE PINGㅤㅤㅤㅤ', icon_url='https://cdn-icons-png.flaticon.com/512/2695/2695903.png')
-
     embed.set_image(url='')
-
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
-
 
 ##SUGESTÕES DE MELHORIAS    
     
 @client.command()
 async def sugestao(ctx):
+    
     embed = discord.Embed(
         title='DÚVIDAS / SUGESTÕES', url="",
         description='Ficou com alguma dúvida? gostaria de dar sugestões ou até mesmo fazer críticas ***construtivas***? Ficaremos extremamente feliz em poder ouvi-los! Estamos sempre trabalhando em atualizações futuras para poder trazer as melhores experiências para os usuários.\n',
@@ -547,31 +493,27 @@ async def sugestao(ctx):
     )
 
     embed.set_author(name='ALIEN.py', icon_url='')
-
     embed.set_image(url='https://i.imgur.com/Pn0zQ5S.jpg')
-
     embed.add_field(name="INSTAGRAM", value="@alien.pipy", inline=False)
-
     embed.add_field(name="E-MAIL", value="alien.py@protonmail.com", inline=False)
-
     embed.add_field(name="APOIE MEU TRABALHO  💚", value="Chave PIX: d1651eb8-4c84-4b2b-b60a-9e3884cea92d",
                     inline=False)
-
+    
     await ctx.send(embed=embed)
 
-     #--------------------------------------------------------[TRADUÇÃO]-------------------------------------------------------------#
+#--------------------------------------------------------[TRADUÇÃO]-------------------------------------------------------------#
 
-@client.command() #𝐶𝑂𝑁𝑆𝑈𝐿𝑇𝐴 𝐷𝐸 𝐹𝐸𝑅𝐼𝐴𝐷𝑂𝑆
-async def traduzir(ctx):    
+@client.command() #TRADUÇÃO
+async def traduzir(ctx):
+    
     embed = discord.Embed(
-        title='➢ COMO TRADUZIR?',
+        title='',
         colour=29695
     )
-    
+
     embed.set_thumbnail(url="https://cdn.iconscout.com/icon/free/png-256/languages-1891105-1598018.png")
-
-    embed.add_field(name="COMANDO", value='Utilize o comando /tradutor "Texto" SELECIONE UMA LÍNGUA (Exemplo: en, es, pt)', inline=False)
-
+    embed.add_field(name="Use o comando", value='/tradutor "Texto" LÍNGUA (Exemplo: en, es, pt)', inline=False)
+    embed.set_author(name='COMANDO PARA TRADUÇÃO', icon_url='https://cdn-icons-png.flaticon.com/512/6498/6498012.png')
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
