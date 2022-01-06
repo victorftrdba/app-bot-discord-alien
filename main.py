@@ -559,5 +559,21 @@ async def sugestao(ctx):
 
     await ctx.send(embed=embed)
 
+     #--------------------------------------------------------[TRADUÇÃO]-------------------------------------------------------------#
+
+@client.command() #𝐶𝑂𝑁𝑆𝑈𝐿𝑇𝐴 𝐷𝐸 𝐹𝐸𝑅𝐼𝐴𝐷𝑂𝑆
+async def traduzir(ctx):    
+    embed = discord.Embed(
+        title='',
+        colour=29695
+    )
+    
+    embed.set_thumbnail(url="https://cdn.iconscout.com/icon/free/png-256/languages-1891105-1598018.png")
+
+    embed.add_field(name="➢ COMO TRADUZIR?", value='***Utilize o comando /tradutor "Texto" SELECIONE UMA LÍNGUA (Exemplo: en, es, pt)***', inline=False)
+
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
 
 client.run('ODk0MDE0Nzk2Nzc1NjkwMjcw.YVj2KQ.pAi2T-enFcthkZ-NIMSTglHZ2hI')
