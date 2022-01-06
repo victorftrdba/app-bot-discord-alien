@@ -5,7 +5,7 @@ import os
 from typing import Text
 from discord.ext import commands
 
-client = commands.Bot(command_prefix=".", case_insensitive=False)
+client = commands.Bot(command_prefix=".", case_insensitive=False, help_command=None)
 
 
 @client.event
