@@ -51,7 +51,7 @@ async def consulta(ctx):
     embed.add_field(name="🏨 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗖𝗡𝗣𝗝",
                     value="Use o comando ***a!cnpj*** {CNPJ} para consultar os dados.", inline=False)
     embed.add_field(name="🚘 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗣𝗟𝗔𝗖𝗔",
-                    value="Use o comando ***a!placa*** {Placa do veículo} para realizar a consulta.", inline=False)
+                    value="Use o comando ***/placa*** {Placa do veículo} para realizar a consulta.", inline=False)
     embed.add_field(name="📌 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗜𝗣",
                     value="Use o comando ***a!ip*** {IP} para realizar a consulta do IP.", inline=False)
     embed.add_field(name="💳 𝗖𝗢𝗡𝗦𝗨𝗟𝗧𝗔 𝗕𝗜𝗡",
@@ -79,13 +79,26 @@ async def consulta(ctx):
 async def ajuda(ctx):
     embed = discord.Embed(
         title='',
-        description='A AJUDA CHEGOU',
+        description='',
         colour=3386077
     )
 
-    embed.set_author(name='TESTE PRIVADO', icon_url='')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
-        
+    embed.add_field(name="🔐 Moderação", value='Use o comando `/admin` para ver os comandos administrativos. Comando de moderação existentes: `/kick`, `/ban`, `unban`, `/role`, `/mute`, `/clear` ', inline=False)
+    embed.add_field(name="🔍 Consultas", value='Use o comando `/consulta` para obter mais informações. Comandos de consultas existentes: `/nome`, `/cpf`, `/telefone`, `/cnpj`, `/placa`, `/ip` `/bin`, `/cep`, `/covid`, `/banco`, `/site`', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+    embed.add_field(name="", value='', inline=False)
+
+    embed.set_author(name='🔮 A AJUDA CHEGOU 🔮', icon_url='')
+
     await ctx.author.send(embed=embed); 
 
 @client.command()
