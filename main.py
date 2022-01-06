@@ -86,7 +86,7 @@ async def ajuda(ctx):
     embed.set_author(name='TESTE PRIVADO', icon_url='')
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
         
-    await ctx.author.send(embed); 
+    await ctx.author.send(embed=embed); 
 
 @client.command()
 async def nome(ctx):
