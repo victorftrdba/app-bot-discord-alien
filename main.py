@@ -73,7 +73,14 @@ async def consulta(ctx):
     await ctx.send(embed=embed)
 
 
-##CONSULTA DE NOME
+#################################################################################################################################
+
+@client.command()
+async def ajuda(ctx):
+    
+    message = f"``` /traduzir 'texto' LÍNGUA (Ex: en, pt, de, es) ```"
+    
+    await ctx.author.send(message); 
 
 @client.command()
 async def nome(ctx):
