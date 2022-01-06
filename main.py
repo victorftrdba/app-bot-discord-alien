@@ -77,10 +77,16 @@ async def consulta(ctx):
 
 @client.command()
 async def ajuda(ctx):
-    
-    message = f"**👽 A AJUDA CHEGOU 👽 \n\n🚀 Utilize o comando `/traduzir 'texto' LÍNGUA (Ex: en, pt, de, es)` para traduzir de uma língua para outra; \n\n🚀 Utilize o comando `/cep NÚMERO` para fazer consultas em um CEP;**"
-    
-    await ctx.author.send(message); 
+    embed = discord.Embed(
+        title='',
+        description='A AJUDA CHEGOU',
+        colour=3386077
+    )
+
+    embed.set_author(name='TESTE PRIVADO', icon_url='')
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+        
+    await ctx.author.send(embed); 
 
 @client.command()
 async def nome(ctx):
