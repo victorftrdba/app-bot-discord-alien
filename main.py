@@ -78,7 +78,7 @@ async def consulta(ctx):
 @client.command()
 async def ajuda(ctx):
     
-    message = f"``` /traduzir 'texto' LÍNGUA (Ex: en, pt, de, es) ```"
+    message = f"``` Olá, seja bem-vindo ao meu painel de comando! \nUtilize o comando **/traduzir 'texto' LÍNGUA (Ex: en, pt, de, es)** para fazer uma tradução de uma língua para outra, lembre-se de selecionar a língua que você quer que o texto seja traduzido \n**/cep NÚMERO** para fazer consultas em um CEP ```"
     
     await ctx.author.send(message); 
 
