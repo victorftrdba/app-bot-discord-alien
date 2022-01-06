@@ -5,12 +5,12 @@ import os
 from typing import Text
 from discord.ext import commands
 
-client = commands.Bot(command_prefix="/", case_insensitive=False)
+client = commands.Bot(command_prefix=".", case_insensitive=False)
 
 
 @client.event
 async def on_ready():
-    activity = discord.Game(name='Happy New Year ✨', type=3)
+    activity = discord.Game(name='Ajuda? Digite .ajuda 👽', type=3)
     await client.change_presence(status=discord.Status.idle, activity=activity)
     print("Conectando, por favor, aguarde...")
 
