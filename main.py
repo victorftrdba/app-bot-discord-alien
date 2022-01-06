@@ -23,17 +23,6 @@ async def on_message(message):
 
 
 @client.command()
-async def clear(ctx, amount: int):
-    await ctx.channel.purge(limit=amount)
-
-
-@clear.error
-async def clear_error(ctx, error):
-    if isinstance(error, commands.MissingRequiredArguments):
-        await ctx.send('...')
-
-
-@client.command()
 async def consulta(ctx):
     
     embed = discord.Embed(
@@ -86,9 +75,10 @@ async def ajuda(ctx):
     embed.add_field(name="🔐 Moderação", value='Use o comando `/admin` para ver os comandos administrativos. Comando de moderação existentes: `/kick`, `/ban`, `unban`, `/unmute`, `/role`, `/mute`, `/clear` ', inline=False)
     embed.add_field(name="🔍 Consultas", value='Use o comando `/consulta` para obter mais informações. Comandos de consultas disponíveis: `/nome`, `/cpf`, `/telefone`, `/cnpj`, `/placa`, `/ip` `/bin`, `/cep`, `/covid`, `/banco`, `/site`', inline=False)
     embed.add_field(name="🎵 Músicas", value='Use o comando `/musica` para vizualizar os comandos. Comandos acessíveis a classe: `/play`, `/stop`, `/pause`, `/resume`, `/back/`, `/skip`, `/disconnect`', inline=False)
-    embed.add_field(name="🪐 Informações", value='Use o comando `/info` para ver os comandos disponíveis. Comandos existentes: `/ajuda`, `/ping`, `/git`,', inline=False)
+    embed.add_field(name="🪐 Informações", value='Use o comando `/info` para ver os comandos disponíveis. Comandos existentes: `/ajuda`, `/ping`, `/git`, `/serverinfo`, `/userinfo`', inline=False)
+    embed.add_field(name="🉐 Tradutor", value='Use o comando `/traduzir` "Texto" Língua (Exemplo: en, es, pt, ru)', inline=False)
 
-    embed.set_author(name='🔮 A AJUDA CHEGOU 🔮', icon_url='')
+    embed.set_author(name='🔮 Artic Helper', icon_url='')
 
     await ctx.author.send(embed=embed); 
 
