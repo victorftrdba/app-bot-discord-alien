@@ -512,8 +512,8 @@ async def traduzir(ctx):
     )
 
     embed.set_thumbnail(url="https://cdn.iconscout.com/icon/free/png-256/languages-1891105-1598018.png")
-    embed.add_field(name="Use o comando", value='/tradutor "Texto" LÍNGUA (Exemplo: en, es, pt)', inline=False)
-    embed.set_author(name='COMANDO PARA TRADUÇÃO', icon_url='https://cdn-icons-png.flaticon.com/512/6498/6498012.png')
+    embed.add_field(name="Use o comando", value='/traduzir "Texto" LÍNGUA (Exemplo: en, es, pt)', inline=False)
+    embed.set_author(name='COMANDO PARA TRADUÇÃO', icon_url='https://cdn-icons-png.flaticon.com/512/484/484582.png')
     embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
