@@ -5,7 +5,7 @@ import os
 from typing import Text
 from discord.ext import commands
 
-client = commands.Bot(command_prefix="a!", case_insensitive=False)
+client = commands.Bot(command_prefix="/", case_insensitive=False)
 
 
 @client.event
@@ -92,7 +92,7 @@ async def consulta(ctx):
 async def nome(ctx):
     embed = discord.Embed(
         title='',
-        description='A Consulta por ***NOME*** estará disponível em breve. No momento,\nestamos com ***ausência*** das APIs de consultas por ***nome***!',
+        description='USE O COMANDO /nome {nome da pessoa} para consultar',
         colour=3386077
     )
 
