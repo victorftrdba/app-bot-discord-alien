@@ -150,7 +150,7 @@ async def placa(ctx):
 ##CONSULTA DE CNPJ
 
 @client.command()
-async def cnpj(ctx, cnpj):
+async def cnpj(ctx, cnpj = 0):
     
     data = requests.get(f"https://api-publica.speedio.com.br/buscarcnpj?cnpj={cnpj}").json()
 
