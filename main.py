@@ -185,7 +185,6 @@ async def cnpj(ctx, cnpj):
     except Exception:
         pass
 
-    error = data["error"]
     embed = discord.Embed(
         title='',
         colour=16766976
