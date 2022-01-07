@@ -155,9 +155,8 @@ async def cnpj(ctx, cnpj):
     data = requests.get(f"https://api-publica.speedio.com.br/buscarcnpj?cnpj={cnpj}").json()
 
     try:
-        error = data["error"]
         embed = discord.Embed(
-            title='⚠️ CNPJ NÃO ENCONTRADO ⚠️',
+            title='',
             colour=16766976
         )
         
