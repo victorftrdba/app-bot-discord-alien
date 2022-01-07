@@ -160,8 +160,24 @@ async def cnpj(ctx, cnpj):
             title='⚠️ CNPJ NÃO ENCONTRADO ⚠️',
             colour=16766976
         )
-
-        embed.set_author(name='', icon_url='')
+        
+        embed.add_field(name="➢ CNPJ", value=data['CNPJ'], inline=False)
+        embed.add_field(name="➢ Nome Fantasia", value=data['NOME FANTASIA'], inline=False)
+        embed.add_field(name="➢ Razão Social", value=data['RAZAO SOCIAL'], inline=False)
+        embed.add_field(name="➢ Status", value=data['STATUS'], inline=False)
+        embed.add_field(name="➢ UF", value=data['UF'], inline=False)
+        embed.add_field(name="➢ Bairro", value=data['BAIRRO'], inline=False)
+        embed.add_field(name="➢ Número", value=data['NUMERO'], inline=False)
+        embed.add_field(name="➢ Município", value=data['MUNICIPIO'], inline=False)
+        embed.add_field(name="➢ Abertura", value=data['DATA ABERTURA'], inline=False)
+        embed.add_field(name="➢ DDD", value=data['DDD'], inline=False)
+        embed.add_field(name="➢ Telefone", value=data['TELEFONE'], inline=False)
+        embed.add_field(name="➢ CNAE", value=data['CNAE PRINCIPAL DESCRICAO'], inline=False)
+        embed.add_field(name="➢ CNAE Código", value=data['CNAE PRINCIPAL CODIGO'], inline=False)
+        embed.add_field(name="➢ CNAE Código", value=data['COMPLEMENTO'], inline=False)
+        embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons.flaticon.com/png/512/4151/premium/4151858.png?token=exp=1641266909~hmac=2cddb88d70dc89e429a8175901424a57')
+        embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+        
 
         await ctx.send(embed=embed)
 
@@ -169,27 +185,13 @@ async def cnpj(ctx, cnpj):
     except Exception:
         pass
 
+    error = data["error"]
     embed = discord.Embed(
         title='',
-        colour=8910161
+        colour=16766976
     )
 
-    embed.add_field(name="➢ CNPJ", value=data['CNPJ'], inline=False)
-    embed.add_field(name="➢ Nome Fantasia", value=data['NOME FANTASIA'], inline=False)
-    embed.add_field(name="➢ Razão Social", value=data['RAZAO SOCIAL'], inline=False)
-    embed.add_field(name="➢ Status", value=data['STATUS'], inline=False)
-    embed.add_field(name="➢ UF", value=data['UF'], inline=False)
-    embed.add_field(name="➢ Bairro", value=data['BAIRRO'], inline=False)
-    embed.add_field(name="➢ Número", value=data['NUMERO'], inline=False)
-    embed.add_field(name="➢ Município", value=data['MUNICIPIO'], inline=False)
-    embed.add_field(name="➢ Abertura", value=data['DATA ABERTURA'], inline=False)
-    embed.add_field(name="➢ DDD", value=data['DDD'], inline=False)
-    embed.add_field(name="➢ Telefone", value=data['TELEFONE'], inline=False)
-    embed.add_field(name="➢ CNAE", value=data['CNAE PRINCIPAL DESCRICAO'], inline=False)
-    embed.add_field(name="➢ CNAE Código", value=data['CNAE PRINCIPAL CODIGO'], inline=False)
-    embed.add_field(name="➢ CNAE Código", value=data['COMPLEMENTO'], inline=False)
-    embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons.flaticon.com/png/512/4151/premium/4151858.png?token=exp=1641266909~hmac=2cddb88d70dc89e429a8175901424a57')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.add_field(name="COM DIFICULDADES?", value='TESTANDO', inline=False)
 
     await ctx.send(embed=embed)
 
